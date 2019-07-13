@@ -1,0 +1,43 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+    .wrapper
+      .chat-side
+        .side-header
+          .side-header__box
+            %p.side-header__box--user-name 西江健司
+            %ul.side-header__box__menu
+              %li.side-header__box__menu__new-group
+                %a{:href => "リンク1"}
+                = fa_icon 'edit'
+
+              %li.side-header__box__menu__edit-user
+                %a{:href => "リンク1"}
+                = fa_icon 'cog'
+        .groups
+          .group
+            .group__group-name テスト
+            .group__latest-message まだ名前がありません
+      .chat-main
+        .main-header
+          .main-header__left-box
+            %h2.main-header__left-box__current-group テスト2
+            %ul.main-header__left-box__member-list 
+              Member：
+              %li.main-header__left-box__member-list__member 西江健司
+          %a{:href => "リンク1"}
+            .main-header__edit-btn Edit
+        .messages
+        .form
+          %form.new_message#new_message{action: "/", :method => "post"}
+            .input-box
+              %input.input-box__text#message_content{placeholder:"type a message",type:"text",name:"message[content]"}
+              %label.input-box__image{for:"message_image"}
+                %i.fa
+                = fa_icon 'image'
+                %input.input-box__image__file#message_image{type:"file",name:"message[image]",}
+            %input.submit-btn{name:"commit",value:"Send"}
+
+              
