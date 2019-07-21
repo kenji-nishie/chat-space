@@ -1,6 +1,7 @@
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
+  
 }
 * {
   box-sizing: border-box;
@@ -57,11 +58,13 @@ body {
     & .group {
       margin-bottom: 40px;
       &__group-name {
+        color:white;
         font-size: 15px;
         margin-bottom: 5px;
       }
       &__latest-message {
         font-size: 11px;
+        color:white;
       }
     }
   }
@@ -119,13 +122,13 @@ body {
       background-color: #ddd;
       form.new_message {
         display: flex;
+        position: relative;
         input, textarea, select {
           font-family: inherit;
           font-size: inherit;
           font-weight: inherit;
         }
-        .input-box {
-          position: relative;
+        .form__message {
           width: 100%;
           &__text {
             height: 50px;
@@ -133,27 +136,16 @@ body {
             padding: 0 40px 0 10px;
             color: #434a54;
             border-style: none;
-          }
-          &__image {
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            .fa {
-              display: inline-block;
-              font: normal normal normal 14px/1 FontAwesome;
-              font-size: inherit;
-              text-rendering: auto;
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-            }
-            .input-box__image__file {
-              display: none;
-            }
-          }
+         }
+       }
+        .form__mask{ 
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 115px;
+          cursor: pointer;
         }
-        .submit-btn {
+        .form__submit{
           width: 100px;
           height: 50px;
           padding: 0 30px;
@@ -176,4 +168,22 @@ body {
       }
     }
   }
+}
+.fa-cog{
+  color:white;
+}
+.fa-edit{
+  color:white;
+}
+.group__message{
+  color:white;
+  text-decoration:none;
+}
+.group__name{
+  color:white;
+  text-decoration:none;
+}
+
+input.hidden{
+  display: none;
 }
