@@ -78,18 +78,18 @@ body {
       justify-content: space-between;
       border-bottom: solid 1px #eee;
       overflow: scroll;
-      a {
+      .main-header__edit-btn {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 30px;
+        border: solid 1px #38aef0;
+        position: absolute;
+        right: 40px;
+      }
+      a.main-header__edit-btn2{
         color: #38aef0;
         text-decoration: none;
-        .main-header__edit-btn {
-          height: 40px;
-          line-height: 40px;
-          padding: 0 20px;
-          margin-top: 30px;
-          border: solid 1px #38aef0;
-          position: absolute;
-          right: 40px;
-        }
       }
       .main-header__left-box {
         margin-top: 35px;

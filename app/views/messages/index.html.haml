@@ -15,8 +15,8 @@
               %li.main-header__left-box__member-list__member
                 - @group.group_users.each do |group_user|
                   = group_user.user.name
-          %a{:href => "リンク1"}
-            .main-header__edit-btn Edit
+          .main-header__edit-btn
+            = link_to "Edit",users_path, class: "main-header__edit-btn2"
             
         .messages
           = render @messages

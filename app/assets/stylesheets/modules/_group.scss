@@ -48,7 +48,7 @@
       display: block;
     }
 
-    &__field--left {
+    &--left {
       float: left;
       width: 30%;
       padding-right: 20px;
@@ -56,19 +56,19 @@
       box-sizing: border-box;
     }
 
-    &__field--right {
+    &--right {
       float: right;
       width: 70%;
     }
 
-    &__label {
+    .chat-group-form__label {
       display: block;
       line-height: 50px;
       font-weight: bold;
       text-align: right;
     }
 
-    &__input {
+    .chat-group-form__input {
       float: left;
       width: 100%;
       line-height: 30px;
