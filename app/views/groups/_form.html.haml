@@ -29,7 +29,14 @@
             %input.member_id{name:"group[user_ids][]", type: "hidden", value: current_user.id }
             %p.chat-group-user__name 
               = current_user.name
+        - else 
+          - @group.users.each do |user|
+            #chat-group-user-8.chat-group-user.clearfix.js-chat-member
+              %input.member_id{name:"group[user_ids][]", type: "hidden", value: user.id }
+              %p.chat-group-user__name 
+                = user.name
+              
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
-      = f.submit class: 'chat-group-form__action-btn'
+      %input.chat-group-form__action-btn{"data-disable-with": "Save", name: "commit", type: "submit", value: "Save"}/
