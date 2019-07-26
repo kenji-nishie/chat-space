@@ -67,6 +67,7 @@ $(function(){
       messages.forEach(function(message){
         if(message.id > last_message_id && message.group_id == last_message_group){
           insertHTML = buildHTML(message); //メッセージが入ったHTMLを取得
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         }
         $('.messages').append(insertHTML);
       });
