@@ -18,7 +18,7 @@ $(function(){
     html = message.image.url== null?
       $(html).append(`<div></div>`) : $(html).append(`<img class="chat__bottom__message__image" src="${message.image.url}" width="250" height="250">`)
     return html;
-  }
+  };
 
   $("#new_message").on('submit', function(e){
     e.preventDefault();

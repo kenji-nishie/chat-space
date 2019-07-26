@@ -32,17 +32,12 @@
             
         - else 
           - @group.users.each do |user|
-            - if current_user.id != user.id
-              #chat-group-user-8.chat-group-user.clearfix.js-chat-member
-                %input.member_id{name:"group[user_ids][]", type: "hidden", value: user.id }
-                %p.chat-group-user__name 
-                  = user.name
+            #chat-group-user-8.chat-group-user.clearfix.js-chat-member
+              %input.member_id{name:"group[user_ids][]", type: "hidden", value: user.id }
+              %p.chat-group-user__name 
+                = user.name
+              - if current_user.id != user.id
                 .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
-            - else
-              #chat-group-user-8.chat-group-user.clearfix.js-chat-member
-                %input.member_id{name:"group[user_ids][]", type: "hidden", value: user.id }
-                %p.chat-group-user__name 
-                  = user.name
                 
               
   .chat-group-form__field.clearfix
