@@ -78,3 +78,4 @@ end
 
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'jquery-turbolinks'
